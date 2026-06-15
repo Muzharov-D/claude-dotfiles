@@ -42,7 +42,8 @@ cd $HOME\claude-dotfiles
 
 - **gsd** — структурный workflow-плагин (planning / execution / verification).
   Источник: <https://github.com/jnuyens/gsd-plugin>
-- **bmad** — BMAD Method, agile AI-driven development (маркетплейс автора PabloLION).
+- **bmad** — BMAD Method, agile AI-driven development.
+  Источник: <https://github.com/PabloLION/bmad-plugin>
 
 Установка прямо в Claude Code:
 
@@ -50,12 +51,11 @@ cd $HOME\claude-dotfiles
 /plugin marketplace add jnuyens/gsd-plugin
 /plugin install gsd@gsd-plugin
 
-/plugin marketplace add <источник-bmad-маркетплейса>
+/plugin marketplace add PabloLION/bmad-plugin
 /plugin install bmad@bmad-method
 ```
 
-> Источник bmad-маркетплейса возьми с машины, где он уже стоит:
-> `~/.claude/plugins/known_marketplaces.json`.
+> Команды ставят актуальные версии. На исходной машине стояли bmad `6.2.2.0` и gsd `3.4.10`.
 
 ## Что намеренно НЕ включено
 
