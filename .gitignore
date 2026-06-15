@@ -1,0 +1,13 @@
+# Backups created by the install scripts
+*.backup.*
+
+# Private / machine-specific — never commit
+.claude.json
+**/memory/
+
+# OS & editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
