@@ -37,17 +37,27 @@ cd ~/claude-dotfiles
 После этого правки в репо сразу видны Claude Code, а `git pull` обновляет конфиг на лету.
 Существующие папки (если есть) скрипт не удаляет, а переименует в `*.backup.<дата>`.
 
-## Установка (Windows)
+## Быстрая установка на новый Windows (рекомендуется)
 
-PowerShell (для симлинков нужен **Developer Mode** или запуск от администратора):
+В **PowerShell** (не CMD). Если нет `git` — поставь: `winget install --id Git.Git -e`
 
 ```powershell
 git clone https://github.com/Muzharov-D/claude-dotfiles.git $HOME\claude-dotfiles
 cd $HOME\claude-dotfiles
-.\install.ps1
+powershell -ExecutionPolicy Bypass -File .\setup-windows.ps1
 ```
 
-Если симлинки недоступны — скрипт скопирует папки (тогда после правок запускай `install.ps1` снова).
+`setup-windows.ps1` ставит Claude Code CLI и линкует агенты/скилы/команды в `~/.claude`,
+а в конце печатает команды для плагинов (нужен одноразовый вход через `claude`).
+Для «живых» симлинков включи **Developer Mode** (Параметры → Конфиденциальность и защита → Для разработчиков);
+иначе скрипт просто скопирует папки — тогда после `git pull` запускай `install.ps1` снова.
+
+## Установка вручную на Windows (только агенты / скилы / команды)
+
+```powershell
+cd $HOME\claude-dotfiles
+.\install.ps1
+```
 
 ## Плагины (ставятся отдельно)
 
