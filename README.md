@@ -12,10 +12,23 @@
 | **skills/** | 9 скилов — `agent-browser`, `presentation-structure`, `presentation-styling`, `time-*`, `weather-*`, `vibe-to-agentic-framework` |
 | **commands/** | 5 слэш-команд — `workflows/best-practice/` |
 
-## Установка (macOS / Linux)
+## Быстрая установка на новый Mac (рекомендуется)
+
+Три строки — скрипт сам поставит Claude Code CLI, пропишет PATH и слинкует агенты/скилы/команды:
 
 ```bash
-git clone <URL-этого-репо> ~/claude-dotfiles
+git clone https://github.com/Muzharov-D/claude-dotfiles.git ~/claude-dotfiles
+cd ~/claude-dotfiles
+bash setup-mac.sh
+```
+
+Если `git` ещё не установлен — macOS сам предложит поставить Developer Tools, согласись и повтори.
+В конце скрипт распечатает 5 команд для плагинов (нужен одноразовый вход через `claude`).
+
+## Установка вручную (только агенты / скилы / команды)
+
+```bash
+git clone https://github.com/Muzharov-D/claude-dotfiles.git ~/claude-dotfiles
 cd ~/claude-dotfiles
 ./install.sh
 ```
@@ -29,7 +42,7 @@ cd ~/claude-dotfiles
 PowerShell (для симлинков нужен **Developer Mode** или запуск от администратора):
 
 ```powershell
-git clone <URL> $HOME\claude-dotfiles
+git clone https://github.com/Muzharov-D/claude-dotfiles.git $HOME\claude-dotfiles
 cd $HOME\claude-dotfiles
 .\install.ps1
 ```
